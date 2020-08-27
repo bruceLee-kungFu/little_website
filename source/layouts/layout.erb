@@ -7,10 +7,32 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
+    <%= stylesheet_link_tag "w3" %>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <%= yield %>
+    <div class="w3-border">
+      <div class="w3-container w3-black">
+        <%= partial 'p/navbar.html.erb' %>
+      </div>
+      <div class="w3-container">
+        <%= yield %>
+      </div>
+      <div class="footer">
+        Fixed-Footer
+      </div>
+    </div>
   </body>
 </html>
