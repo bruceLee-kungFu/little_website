@@ -9,6 +9,10 @@ configure :development do
   set :debug_assets, false
   activate :livereload
 end
+
+activate :relative_assets
+config[:relative_links] = true
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
