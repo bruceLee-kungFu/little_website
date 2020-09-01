@@ -18,7 +18,9 @@ configure :development do
 end
 
 configure :build do
-  activate :asset_host, :host => 'little_website'
+  # activate :asset_host, :host => 'little_website'
+  # activate :host => 'little_website'
+  config[:host] = "little_website"
   ignore '/p/*'
 end
 
