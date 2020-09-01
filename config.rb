@@ -6,6 +6,9 @@ activate :autoprefixer do |prefix|
 end
 
 activate :relative_assets
+# old syntax
+set :relative_links, true
+# new syntax
 config[:relative_links] = true
 config[:build_dir] = 'docs'   # github pages
 
