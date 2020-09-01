@@ -5,7 +5,7 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-activate :relative_assets
+# activate :relative_assets
 # old syntax
 set :relative_links, true
 # new syntax
