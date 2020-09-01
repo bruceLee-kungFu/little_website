@@ -5,13 +5,18 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :relative_assets
+config[:relative_links] = true
+config[:build_dir] = 'docs'   # github pages
+
 configure :development do
   set :debug_assets, false
   activate :livereload
 end
 
-activate :relative_assets
-config[:relative_links] = true
+configure :build do
+  ignore '/p/*'
+end
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
